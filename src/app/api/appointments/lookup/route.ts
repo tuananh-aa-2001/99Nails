@@ -3,6 +3,14 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
+interface Appointment {
+    startTime: string | Date;
+    duration?: number;
+}
+interface Customer {
+    appointments: Appointment[];
+}
+
 export async function POST(request: Request) {
     try {
         const { email, phone } = await request.json();
@@ -29,7 +37,7 @@ export async function POST(request: Request) {
             }
         });
 
-        const appointments = customers.flatMap(c => c.appointments);
+        const appointments = customers.flatMap((c: Customer) => c.appointments);
 
         return NextResponse.json(appointments);
     } catch (error) {
