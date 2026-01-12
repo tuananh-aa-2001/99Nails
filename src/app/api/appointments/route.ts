@@ -5,6 +5,11 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
+interface Appointment {
+    startTime: string | Date;
+    duration?: number;
+}
+
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const email = searchParams.get('email');
@@ -104,9 +109,11 @@ export async function POST(request: Request) {
             }
         });
 
-        const hasConflict = appointments.some(apt => {
+        const hasConflict = appointments.some((apt: Appointment) => {
             const existingStart = new Date(apt.startTime);
-            const existingEndWithBuffer = new Date(existingStart.getTime() + (apt.duration + 15) * 60000);
+            const existingEndWithBuffer = new Date(
+                existingStart.getTime() + ((apt.duration ?? 45) + 15) * 60000
+            );
             const requestedStart = appointmentDate;
             const requestedEndWithBufferValue = new Date(requestedStart.getTime() + (duration + 15) * 60000);
 
