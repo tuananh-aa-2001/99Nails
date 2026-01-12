@@ -5,6 +5,11 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
+interface Appointment {
+    startTime: string | Date;
+    duration?: number;
+}
+
 // GET single appointment by ID
 export async function GET(
     request: Request,
@@ -73,7 +78,7 @@ export async function PATCH(
             }
         });
 
-        const hasConflict = conflicts.some(apt => {
+        const hasConflict = conflicts.some((apt: Appointment) => {
             const existingStart = new Date(apt.startTime);
             const existingDuration = apt.duration || 45;
             const existingEndWithBuffer = new Date(existingStart.getTime() + (existingDuration + 15) * 60000);
