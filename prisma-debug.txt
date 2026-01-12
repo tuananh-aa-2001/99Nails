@@ -1,0 +1,82 @@
+Error initializing prisma: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+          
+PrismaClientInitializationError: `PrismaClient` needs to be constructed with a non-empty, valid `PrismaClientOptions`:
+
+```
+new PrismaClient({
+  ...
+})
+```
+
+or
+
+```
+constructor() {
+  super({ ... });
+}
+```
+          
+    at new t (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\@prisma\client\runtime\client.js:70:960)
+    at prismaClientSingleton (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[root-of-the-server]__1c986165._.js:55:16)
+    at module evaluation (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[root-of-the-server]__1c986165._.js:63:42)
+    at instantiateModule (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:740:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:763:12)
+    at Context.esmImport [as i] (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[root-of-the-server]__1c986165._.js:198:174)
+    at instantiateModule (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:740:9)
+    at getOrInstantiateModuleFromParent (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:763:12)
+    at Context.esmImport [as i] (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\a29c4_next_91fbd560._.js:14652:196)
+    at instantiateModule (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:740:9)
+    at instantiateRuntimeModule (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:768:12)
+    at getOrInstantiateRuntimeModule (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:781:12)
+    at Object.m (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\chunks\[turbopack]_runtime.js:790:18)
+    at Object.<anonymous> (C:\Users\Tuan\Desktop\Nailwebsite\.next\dev\server\app\api\appointments\route.js:8:3)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1504:12)
+    at mod.require (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\require-hook.js:68:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\require.js:105:80)
+    at loadComponentsImpl (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\load-components.js:155:61)
+    at DevServer.findPageComponentsImpl (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\next-server.js:877:77)
+    at C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\next-server.js:859:21
+    at C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\lib\trace\tracer.js:185:36
+    at NoopContextManager.with (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\lib\trace\tracer.js:154:103
+    at NoopContextManager.with (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NextTracerImpl.trace (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\lib\trace\tracer.js:154:28)
+    at DevServer.findPageComponents (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\next-server.js:854:41)
+    at DevServer.findPageComponents (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\dev\next-dev-server.js:691:28)
+    at async DevServer.renderPageComponent (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\base-server.js:1460:24)
+    at async DevServer.renderToResponseImpl (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\base-server.js:1524:32)
+    at async DevServer.pipeImpl (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\base-server.js:1018:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\next-server.js:395:17)
+    at async DevServer.handleRequestImpl (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\base-server.js:909:17)
+    at async C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\dev\next-dev-server.js:387:20
+    at async Span.traceAsyncFn (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\trace\trace.js:157:20)
+    at async DevServer.handleRequest (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\dev\next-dev-server.js:383:24)
+    at async invokeRender (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\lib\router-server.js:248:21)
+    at async handleRequest (C:\Users\Tuan\Desktop\Nailwebsite\node_modules\next\dist\server\lib\router-server.js:447:24)

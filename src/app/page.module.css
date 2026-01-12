@@ -1,0 +1,179 @@
+.main {
+    min-height: 100vh;
+}
+
+.hero {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 80px 0;
+}
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.heroContent {
+    flex: 1;
+}
+
+.heroImageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.heroImage {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    color: var(--color-dark);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    margin-bottom: 32px;
+}
+
+.about {
+    padding: 80px 0;
+    background: white;
+}
+
+.aboutContent {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutContent h2 {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+}
+
+.aboutContent p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-muted);
+    margin-bottom: 24px;
+}
+
+.services {
+    padding: 80px 0;
+    background: #fcfcfc;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.card {
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s;
+    border: 1px solid #f9f9f9;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: var(--color-dark);
+}
+
+.card p {
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    display: block;
+}
+
+.footer {
+    background: var(--color-dark);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footerInfo h3 {
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.footerContact h4,
+.footerHours h4 {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+.footerContact p,
+.footerHours p {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 992px) {
+    .heroContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroImageWrapper {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+}

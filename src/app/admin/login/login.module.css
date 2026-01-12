@@ -1,0 +1,94 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce7f3 0%, #e0e7ff 100%);
+    padding: 1rem;
+}
+
+.loginCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.loginCard h1 {
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-size: 1.8rem;
+}
+
+.loginCard p {
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 1rem;
+    background: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.loginBtn:hover {
+    background: #6d28d9;
+}
+
+.loginBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.backLink {
+    display: block;
+    margin-top: 1.5rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.backLink:hover {
+    color: #1f2937;
+    text-decoration: underline;
+}

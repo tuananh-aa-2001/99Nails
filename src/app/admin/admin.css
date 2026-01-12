@@ -1,0 +1,314 @@
+/* Admin Dashboard Styles */
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: var(--font-body);
+    background-color: #fafafa;
+    min-height: 100vh;
+}
+
+.admin-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+.admin-header p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    margin: 0;
+}
+
+.admin-header strong {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.2rem;
+    color: var(--color-muted);
+}
+
+.admin-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .admin-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calendar-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-secondary);
+}
+
+/* FullCalendar Customizations */
+.fc {
+    font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem !important;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.fc .fc-button {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: white !important;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: var(--radius-md) !important;
+    transition: all 0.2s !important;
+}
+
+.fc .fc-button:hover {
+    opacity: 0.9 !important;
+    transform: translateY(-1px);
+}
+
+.fc .fc-button-active {
+    background-color: var(--color-dark) !important;
+    border-color: var(--color-dark) !important;
+}
+
+.fc .fc-event {
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.fc .fc-event:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+}
+
+.fc .fc-daygrid-day-number {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 8px !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+    color: var(--color-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 12px 0 !important;
+}
+
+.fc .fc-day-today {
+    background-color: var(--color-secondary) !important;
+}
+
+/* Event Details Panel */
+.event-details {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-secondary);
+    overflow: hidden;
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-details-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-details-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: background 0.2s;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.event-details-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-row .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.detail-row .value {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.detail-row .value a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.detail-row .value a:hover {
+    color: var(--color-dark);
+    text-decoration: underline;
+}
+
+/* Legend */
+.legend {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-secondary);
+}
+
+.legend h3 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legend-items {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .admin-container {
+        padding: 1rem;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .admin-header h1 {
+        font-size: 2rem;
+    }
+
+    .calendar-section {
+        padding: 1rem;
+    }
+
+    .fc .fc-toolbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .fc .fc-toolbar-chunk {
+        display: flex;
+        justify-content: center;
+    }
+
+    .event-details {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+
+    .legend-items {
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id        Int      @id @default(autoincrement())
+  name      String
+  phone     String?
+  email     String?
+  createdAt DateTime @default(now())
+  appointments Appointment[]
+}
+
+model Appointment {
+  id        Int      @id @default(autoincrement())
+  startTime DateTime
+  
+  // Service details
+  serviceName String // "Manicure", "Pedicure"
+  extras      String? // "Stamping,Glitter" - simple comma separated for now
+  
+  status    String   @default("CONFIRMED") // CONFIRMED, CANCELLED, COMPLETED
+  duration  Int      @default(45)          // Duration in minutes
+  
+  customerId Int
+  customer   Customer @relation(fields: [customerId], references: [id])
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  notifications NotificationLog[]
+}
+
+model NotificationLog {
+  id            Int      @id @default(autoincrement())
+  type          String   // "CONFIRMATION", "REMINDER", "CANCELLATION", "OPERATOR_ALERT"
+  method        String   // "EMAIL", "SMS"
+  status        String   // "SENT", "FAILED"
+  sentAt        DateTime @default(now())
+  
+  appointmentId Int
+  appointment   Appointment @relation(fields: [appointmentId], references: [id])
+}

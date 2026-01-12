@@ -1,0 +1,10 @@
+{
+    "startTime": "2026-01-16T10:00:00Z",
+    "service": "Manicure",
+    "extras": "Gel polish",
+    "customer": {
+        "name": "Maria Schmidt",
+        "email": "maria@example.com",
+        "phone": "+4915129762397"
+    }
+}
